@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myshop/screens/product_overview_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,21 +27,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('My shop'),
-      ),
-      body: Center(
-        child: Text('My Shop'),
-      ),
+      home: ProductsOverviewScreen(),
     );
   }
 }
