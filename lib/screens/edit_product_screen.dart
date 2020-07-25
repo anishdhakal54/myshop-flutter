@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myshop/providers/products_provider.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/product.dart';
+import '../providers/products.dart';
 
 class EditProductScreen extends StatefulWidget {
   static const routeName = '/edit-product';
@@ -103,17 +103,17 @@ class _EditProductScreenState extends State<EditProductScreen> {
         await showDialog(
           context: context,
           builder: (ctx) => AlertDialog(
-            title: Text('An error occurred!'),
-            content: Text('Something went wrong.'),
-            actions: <Widget>[
-              FlatButton(
-                child: Text('Okay'),
-                onPressed: () {
-                  Navigator.of(ctx).pop();
-                },
-              )
-            ],
-          ),
+                title: Text('An error occurred!'),
+                content: Text('Something went wrong.'),
+                actions: <Widget>[
+                  FlatButton(
+                    child: Text('Okay'),
+                    onPressed: () {
+                      Navigator.of(ctx).pop();
+                    },
+                  )
+                ],
+              ),
         );
       }
       // finally {
@@ -172,7 +172,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                             description: _editedProduct.description,
                             imageUrl: _editedProduct.imageUrl,
                             id: _editedProduct.id,
-                            isFavourite: _editedProduct.isFavourite);
+                            isFavorite: _editedProduct.isFavorite);
                       },
                     ),
                     TextFormField(
@@ -204,7 +204,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                             description: _editedProduct.description,
                             imageUrl: _editedProduct.imageUrl,
                             id: _editedProduct.id,
-                            isFavourite: _editedProduct.isFavourite);
+                            isFavorite: _editedProduct.isFavorite);
                       },
                     ),
                     TextFormField(
@@ -229,7 +229,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                           description: value,
                           imageUrl: _editedProduct.imageUrl,
                           id: _editedProduct.id,
-                          isFavourite: _editedProduct.isFavourite,
+                          isFavorite: _editedProduct.isFavorite,
                         );
                       },
                     ),
@@ -290,7 +290,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                 description: _editedProduct.description,
                                 imageUrl: value,
                                 id: _editedProduct.id,
-                                isFavourite: _editedProduct.isFavourite,
+                                isFavorite: _editedProduct.isFavorite,
                               );
                             },
                           ),
